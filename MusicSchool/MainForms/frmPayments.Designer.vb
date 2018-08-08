@@ -288,7 +288,7 @@ Partial Class frmPayments
         Me.Name = "frmPayments"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmPayments"
+        Me.Text = "Payments"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.tdbpay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -1,16 +1,18 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Runtime.InteropServices
+Imports System.Configuration
 
 Module MainModule
 
 #If DEBUG Then
-    Public constr As String = "server=RMG-PC\SQLEXPRESS;User Id=SA ; Password=rabih_123123; database = MusicSchool "
+    ' Public constr As String = "server=RMG-PC\SQLEXPRESS;User Id=SA ; Password=rabih_123123; database = MusicSchool "
 #Else
         Public constr As String = "server=RMG-PC\SQLEXPRESS;User Id=SA ; Password=rabih_123123; database = MusicSchool "
 #End If
 
     'Public constr As String = "server=USER-PC\RABIH;Integrated Security=yes; database = MusicSchool "
     '  Public constr As String = "server=RH-PC\SQLEXPRESS;Integrated Security=yes; database = MusicSchool "
+    Public constr = ConfigurationManager.ConnectionStrings("My_ConnectionString").ConnectionString
     Public username, usercode As String
     Public dtsession As DataTable
     Private frmload As frmMain

@@ -32,12 +32,7 @@ Public Class frmMain
 
         Try
 
-            frm = New frmlogin
-            Me.Show()
-            frm.StartPosition = FormStartPosition.CenterScreen
-            If Not frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Me.Close()
-            End If
+
 
             CheckGeneratedYear()
 
@@ -257,7 +252,7 @@ Public Class frmMain
             frm = New frmSchedules
             frm.MdiParent = Me
             frm.StartPosition = FormStartPosition.CenterScreen
-            frm.Show(MnuProfSched.Text)
+            frm.show(MnuProfSched.Text)
             'MnuProfSched.Checked = True
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -741,5 +736,9 @@ Public Class frmMain
         Finally
             frm = Nothing
         End Try
+    End Sub
+
+    Private Sub frmMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Application.Exit()
     End Sub
 End Class

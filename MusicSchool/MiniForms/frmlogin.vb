@@ -44,7 +44,7 @@ Public Class frmlogin
     Private Sub Login_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
         Try
             If e.KeyCode = Keys.Enter Then
-                Button1_Click(Button1, Nothing)
+                Button1_Click(btnLogin, Nothing)
             ElseIf e.KeyCode = Keys.Escape Then
                 Me.Close()
             End If
@@ -64,7 +64,7 @@ Public Class frmlogin
             Pb.Top = Me.Top + 30
             Pb.Left = (Me.Width / 2) - (Pb.Width / 2) - 25
             ' pnlInfo.Visible = Pb.Visible = True
-
+            txt1.Focus()
             Application.DoEvents()
         Catch ex As Exception
             MessageBox.Show(ex.ToString, "Form Loggin", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -79,7 +79,7 @@ Public Class frmlogin
         CType(sender, TextBox).BackColor = Color.White
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogin.Click
         Dim strsql As String
         Dim cnsql As SqlConnection
         Dim cmsql As SqlCommand
@@ -102,7 +102,11 @@ Public Class frmlogin
                     If txt2.Text = dr.Item("usr_pass") Then
                         usercode = dr.Item("usr_code").ToString.Trim
                         username = dr.Item("usr_name")
+                        Dim frm As frmMain
+                        frm = New frmMain
+                        frm.Show()
                         Me.DialogResult = Windows.Forms.DialogResult.OK
+                        Me.Hide()
                     Else
                         MessageBox.Show("Incorrect password !", "Loggin Form", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         txt2.Focus() : txt2.SelectAll()
@@ -122,6 +126,6 @@ Public Class frmlogin
     End Sub
 
     Private Sub frmlogin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        pnlInfo.Visible = True : Pb.Visible = True
+        pnlInfo.Visible = True : Pb.Visible = True : txt1.Focus()
     End Sub
 End Class

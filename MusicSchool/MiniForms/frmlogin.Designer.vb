@@ -26,13 +26,12 @@ Partial Class frmlogin
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.Pb = New System.Windows.Forms.PictureBox()
         Me.pnlInfo = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt1 = New System.Windows.Forms.TextBox()
-        Me.btnok = New System.Windows.Forms.Button()
         Me.txt2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -53,7 +52,7 @@ Partial Class frmlogin
         Me.panel1.Location = New System.Drawing.Point(0, 0)
         Me.panel1.Name = "panel1"
         Me.panel1.Size = New System.Drawing.Size(1116, 500)
-        Me.panel1.TabIndex = 15
+        Me.panel1.TabIndex = 0
         '
         'Pb
         '
@@ -69,13 +68,12 @@ Partial Class frmlogin
         'pnlInfo
         '
         Me.pnlInfo.AccessibleName = "7"
-        Me.pnlInfo.Controls.Add(Me.Button1)
+        Me.pnlInfo.Controls.Add(Me.btnLogin)
         Me.pnlInfo.Controls.Add(Me.Label3)
         Me.pnlInfo.Controls.Add(Me.Label2)
         Me.pnlInfo.Controls.Add(Me.Label5)
         Me.pnlInfo.Controls.Add(Me.Label6)
         Me.pnlInfo.Controls.Add(Me.txt1)
-        Me.pnlInfo.Controls.Add(Me.btnok)
         Me.pnlInfo.Controls.Add(Me.txt2)
         Me.pnlInfo.Controls.Add(Me.Label4)
         Me.pnlInfo.Controls.Add(Me.Label7)
@@ -83,23 +81,23 @@ Partial Class frmlogin
         Me.pnlInfo.Location = New System.Drawing.Point(311, 226)
         Me.pnlInfo.Name = "pnlInfo"
         Me.pnlInfo.Size = New System.Drawing.Size(438, 135)
-        Me.pnlInfo.TabIndex = 19
+        Me.pnlInfo.TabIndex = 0
         Me.pnlInfo.Visible = False
         '
-        'Button1
+        'btnLogin
         '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(140, 89)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(164, 46)
-        Me.Button1.TabIndex = 21
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnLogin.BackgroundImage = CType(resources.GetObject("btnLogin.BackgroundImage"), System.Drawing.Image)
+        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogin.FlatAppearance.BorderSize = 0
+        Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogin.Location = New System.Drawing.Point(140, 89)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(164, 46)
+        Me.btnLogin.TabIndex = 2
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -160,24 +158,7 @@ Partial Class frmlogin
         Me.txt1.Multiline = True
         Me.txt1.Name = "txt1"
         Me.txt1.Size = New System.Drawing.Size(253, 25)
-        Me.txt1.TabIndex = 1
-        '
-        'btnok
-        '
-        Me.btnok.BackColor = System.Drawing.Color.White
-        Me.btnok.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnok.Font = New System.Drawing.Font("Arial Black", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnok.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnok.Image = CType(resources.GetObject("btnok.Image"), System.Drawing.Image)
-        Me.btnok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnok.Location = New System.Drawing.Point(191, 98)
-        Me.btnok.Name = "btnok"
-        Me.btnok.Size = New System.Drawing.Size(77, 30)
-        Me.btnok.TabIndex = 3
-        Me.btnok.Text = "Ok"
-        Me.btnok.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnok.UseVisualStyleBackColor = False
+        Me.txt1.TabIndex = 0
         '
         'txt2
         '
@@ -190,7 +171,7 @@ Partial Class frmlogin
         Me.txt2.Name = "txt2"
         Me.txt2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt2.Size = New System.Drawing.Size(253, 25)
-        Me.txt2.TabIndex = 2
+        Me.txt2.TabIndex = 1
         '
         'Label4
         '
@@ -198,7 +179,7 @@ Partial Class frmlogin
         Me.Label4.Location = New System.Drawing.Point(192, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 28)
-        Me.Label4.TabIndex = 10
+        Me.Label4.TabIndex = 3
         Me.Label4.Text = "Label4"
         '
         'Label7
@@ -251,13 +232,12 @@ Partial Class frmlogin
     End Sub
     Friend WithEvents panel1 As System.Windows.Forms.Panel
     Friend WithEvents pnlInfo As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txt1 As System.Windows.Forms.TextBox
-    Friend WithEvents btnok As System.Windows.Forms.Button
     Friend WithEvents txt2 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label

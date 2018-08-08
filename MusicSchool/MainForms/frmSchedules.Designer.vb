@@ -50,7 +50,6 @@ Partial Class frmSchedules
         Me.Label10 = New System.Windows.Forms.Label()
         Me.LblStdName = New System.Windows.Forms.Label()
         Me.Btnclose = New System.Windows.Forms.Button()
-        Me.BtnView = New System.Windows.Forms.Button()
         Me.LblCount = New System.Windows.Forms.Label()
         Me.labelss = New System.Windows.Forms.Label()
         CType(Me.Schedule, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,8 +85,8 @@ Partial Class frmSchedules
         '
         Me.Schedule.Dock = System.Windows.Forms.DockStyle.Top
         Me.Schedule.EditOptions = CType((((C1.Win.C1Schedule.EditOptions.AllowDrag Or C1.Win.C1Schedule.EditOptions.AllowAppointmentEdit) _
-                    Or C1.Win.C1Schedule.EditOptions.AllowAppointmentCreate) _
-                    Or C1.Win.C1Schedule.EditOptions.AllowAppointmentDelete), C1.Win.C1Schedule.EditOptions)
+            Or C1.Win.C1Schedule.EditOptions.AllowAppointmentCreate) _
+            Or C1.Win.C1Schedule.EditOptions.AllowAppointmentDelete), C1.Win.C1Schedule.EditOptions)
         Me.Schedule.GroupPageSize = 2
         Me.Schedule.LargeButtons = True
         Me.Schedule.Location = New System.Drawing.Point(0, 0)
@@ -124,7 +123,7 @@ Partial Class frmSchedules
         Me.Schedule.ShowReminderForm = False
         Me.Schedule.ShowTitle = False
         Me.Schedule.ShowWorkTimeOnly = True
-        Me.Schedule.Size = New System.Drawing.Size(1282, 496)
+        Me.Schedule.Size = New System.Drawing.Size(1282, 493)
         Me.Schedule.TabIndex = 5
         '
         '
@@ -235,7 +234,7 @@ Partial Class frmSchedules
         '
         Me.LblName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblName.ForeColor = System.Drawing.Color.Firebrick
         Me.LblName.Location = New System.Drawing.Point(1000, 531)
         Me.LblName.Name = "LblName"
@@ -255,7 +254,7 @@ Partial Class frmSchedules
         '
         Me.BtnProf.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.BtnProf.Image = Global.MusicSchool.My.Resources.Resources.Button_Add2
-        Me.BtnProf.Location = New System.Drawing.Point(949, 552)
+        Me.BtnProf.Location = New System.Drawing.Point(953, 500)
         Me.BtnProf.Name = "BtnProf"
         Me.BtnProf.Size = New System.Drawing.Size(40, 35)
         Me.BtnProf.TabIndex = 14
@@ -343,19 +342,6 @@ Partial Class frmSchedules
         Me.Btnclose.UseVisualStyleBackColor = True
         Me.Btnclose.Visible = False
         '
-        'BtnView
-        '
-        Me.BtnView.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnView.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnView.ForeColor = System.Drawing.Color.Firebrick
-        Me.BtnView.Location = New System.Drawing.Point(900, 499)
-        Me.BtnView.Name = "BtnView"
-        Me.BtnView.Size = New System.Drawing.Size(91, 36)
-        Me.BtnView.TabIndex = 25
-        Me.BtnView.Text = "View Mode"
-        Me.BtnView.UseVisualStyleBackColor = False
-        Me.BtnView.Visible = False
-        '
         'LblCount
         '
         Me.LblCount.BackColor = System.Drawing.Color.Cornsilk
@@ -391,7 +377,6 @@ Partial Class frmSchedules
         Me.ClientSize = New System.Drawing.Size(1282, 593)
         Me.Controls.Add(Me.labelss)
         Me.Controls.Add(Me.LblCount)
-        Me.Controls.Add(Me.BtnView)
         Me.Controls.Add(Me.Btnclose)
         Me.Controls.Add(Me.LblStdName)
         Me.Controls.Add(Me.Label10)
@@ -449,7 +434,6 @@ Partial Class frmSchedules
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents LblStdName As System.Windows.Forms.Label
     Friend WithEvents Btnclose As System.Windows.Forms.Button
-    Friend WithEvents BtnView As System.Windows.Forms.Button
     Friend WithEvents LblCount As System.Windows.Forms.Label
     Friend WithEvents labelss As System.Windows.Forms.Label
 End Class

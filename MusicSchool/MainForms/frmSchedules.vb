@@ -30,6 +30,9 @@ Public Class frmSchedules
                     ProfName = frm.CbProff.Text
                     LblName.Text = ProfName
                 End If
+                Left = 0
+                Top = 0
+                Size = ParentForm.ClientRectangle.Size
                 Me.Show()
             Else
 
@@ -79,7 +82,7 @@ Public Class frmSchedules
 
             If lcStep = "&A-Professors Schedule" Then
                 BtnPrint.Visible = False
-                BtnView.Visible = True
+                ' BtnView.Visible = True
                 LblCount.Visible = True
                 labelss.Visible = True
                 Me.Height = Screen.PrimaryScreen.WorkingArea.Height - 110
@@ -612,6 +615,10 @@ Public Class frmSchedules
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub BtnView_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub AdjustTabledate()
