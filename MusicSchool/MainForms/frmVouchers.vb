@@ -440,7 +440,7 @@ Is GetType(RadioButton) OrElse ctr.GetType Is GetType(CheckBox) OrElse ctr.GetTy
         End Try
     End Sub
 
-    Private Sub LoopSearch1_TxtChanged(sender As Object, e As EventArgs) Handles LoopSearch1.TxtChanged
+    Private Sub LoopSearch1_TxtChanged(sender As Object, e As EventArgs)
         MsgBox("")
     End Sub
 

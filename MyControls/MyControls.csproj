@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DbHandler.cs" />
     <Compile Include="IDefault.cs" />
+    <Compile Include="Model\DefaultUcPropConverter.cs" />
     <Compile Include="Model\DefaultUcProp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

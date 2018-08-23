@@ -966,12 +966,11 @@ Partial Class frmVouchers
         '
         'LoopSearch1
         '
-        Me.LoopSearch1.Location = New System.Drawing.Point(20, 45)
+        Me.LoopSearch1.Location = New System.Drawing.Point(-87, 80)
         Me.LoopSearch1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.LoopSearch1.Name = "LoopSearch1"
-        Me.LoopSearch1.Size = New System.Drawing.Size(754, 30)
+        Me.LoopSearch1.Size = New System.Drawing.Size(493, 23)
         Me.LoopSearch1.TabIndex = 49
-        Me.LoopSearch1.UserControlProp = Nothing
         '
         'frmVouchers
         '

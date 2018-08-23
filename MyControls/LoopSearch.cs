@@ -24,7 +24,8 @@ namespace MyControls
             InitializeComponent();
         }
 
-        [Category("MyCustom")]
+         [Category("Custom"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content), Localizable(true)]
+
         public DefaultUcProp UserControlProp
         {
             get { return _defaultUcProp; }
