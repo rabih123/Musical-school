@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmVouchers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmVouchers
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVouchers))
@@ -97,6 +97,7 @@ Partial Class frmVouchers
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
+        Me.LoopSearch1 = New MyControls.LoopSearch()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -645,6 +646,7 @@ Partial Class frmVouchers
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.GroupBox2.Controls.Add(Me.LoopSearch1)
         Me.GroupBox2.Controls.Add(Me.btnshow)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.cbYear)
@@ -962,6 +964,15 @@ Partial Class frmVouchers
         Me.Label28.Size = New System.Drawing.Size(1075, 4)
         Me.Label28.TabIndex = 60
         '
+        'LoopSearch1
+        '
+        Me.LoopSearch1.Location = New System.Drawing.Point(20, 45)
+        Me.LoopSearch1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.LoopSearch1.Name = "LoopSearch1"
+        Me.LoopSearch1.Size = New System.Drawing.Size(754, 30)
+        Me.LoopSearch1.TabIndex = 49
+        Me.LoopSearch1.UserControlProp = Nothing
+        '
         'frmVouchers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1085,4 +1096,5 @@ Partial Class frmVouchers
     Friend WithEvents lblCrs As System.Windows.Forms.Label
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents LoopSearch1 As MyControls.LoopSearch
 End Class

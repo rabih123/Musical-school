@@ -206,7 +206,7 @@ Public Class frmVouchers
 
     Private Sub frmVouchers_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuVoucher.Checked = False
+            frmload.MnuVoucher.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -257,6 +257,39 @@ Public Class frmVouchers
             btnCancel.Enabled = False : btnSave.Enabled = False : btnshow.Enabled = False
             cbStudent.Enabled = False : cbYear.Enabled = False
             Pnlhide.BringToFront() : Pnlhide.Visible = True
+
+
+
+            Dim strsql As String
+            Dim cnsql As SqlConnection
+            Dim da As SqlDataAdapter
+            Dim dt As DataTable
+            Try
+                strsql = "select -20 as Std_id , 'Select A Student' as name  union select Std_id , cast(Std_id as varchar(9)) +'  -  ' + std_name+' '+std_Lname as [name] "
+                strsql &= "from tbl_Students "
+                strsql &= "Inner join tbl_profStdCrs on PrS_Stdid=std_id "
+                strsql &= "Inner Join tbl_vouchers on std_id=vch_stdid "
+                strsql &= "where std_status = 'A' "
+                cnsql = New SqlConnection(constr)
+                cnsql.Open()
+                da = New SqlDataAdapter(strsql, cnsql)
+                dt = New DataTable
+                da.Fill(dt)
+
+                Dim col As New AutoCompleteStringCollection
+                Dim i As Integer
+
+                For i = 0 To dt.Rows.Count - 1
+                    col.Add(dt.Rows(i)("name").ToString())
+                Next
+                'TextBox1.AutoCompleteSource = AutoCompleteSource.CustomSource
+                'TextBox1.AutoCompleteCustomSource = col
+                'TextBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString, "")
+            End Try
+
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -405,6 +438,10 @@ Is GetType(RadioButton) OrElse ctr.GetType Is GetType(CheckBox) OrElse ctr.GetTy
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub LoopSearch1_TxtChanged(sender As Object, e As EventArgs) Handles LoopSearch1.TxtChanged
+        MsgBox("")
     End Sub
 
     Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click

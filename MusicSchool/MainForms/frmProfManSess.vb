@@ -17,7 +17,7 @@ Public Class frmProfManSess
 
     Private Sub frmProfManSess_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuMangProfSes.Checked = False
+            frmload.MnuMangProfSes.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

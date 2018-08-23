@@ -28,14 +28,9 @@ Public Class frmMain
         End Try
     End Sub
     Private Sub Frmmain_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Dim frm As frmlogin
 
         Try
-
-
-
             CheckGeneratedYear()
-
             Stslbluser.Text &= usercode & "   -   " & username
             Time.Start()
             stsLbldate.Text = Now.ToString("dddd - dd,MMMM,yyyy")
@@ -51,9 +46,7 @@ Public Class frmMain
             frm2.SetDesktopLocation(Me.Width - 320, Me.Height - 250)
             'Timer1.Interval = 300
             Timer1.Start()
-            usercode = "SU"
-
-
+            ' usercode = "SU"
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -558,7 +551,7 @@ Public Class frmMain
     Private Sub MnuMangProfSes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MnuMangProfSes.Click
         Dim frm As frmProfManSess
         Try
-            If MnuChgStdSess.Checked = True Then
+            If MnuMangProfSes.Checked = True Then
                 MessageBox.Show("The Managing Professors Sessions Form is already opened .", lctitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Exit Try
             End If

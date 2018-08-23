@@ -42,42 +42,19 @@ Public Class frmPrintTmp
         Dim crParameterDiscreteValue As New ParameterDiscreteValue
 
         Try
+            rpt.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & "\" & ReportName)
+
+            With crConnectionInfo
+                .ServerName = CnstrBuilder.DataSource
+                .DatabaseName = CnstrBuilder.InitialCatalog
 #If DEBUG Then
-            'rpt.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & "\..\..\" & ReportName)
-            'With crConnectionInfo
-            '    .ServerName = "USER-PC\RABIH"
-            '    '.ServerName = "RH-PC\SQLEXPRESS"
-            '    .DatabaseName = "MusicSchool"
-            '    '.UserID = "YOUR DATABASE USERNAME"
-            '    '.Password = "YOUR DATABASE PASSWORD"
-            '    .IntegratedSecurity = True
-            'End With
-            rpt.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & "\" & ReportName)
-            With crConnectionInfo
-                .ServerName = "RMG-PC\SQLEXPRESS"
-                .DatabaseName = "MusicSchool"
-                .UserID = "SA"
-                .Password = "rabih_123123"
-
-            End With
-            
+                .IntegratedSecurity = True
 #Else
-            'MsgBox(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6))
-            'rpt.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & "\" & ReportName)
-
-            'MessageBox.Show((System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & ReportName)
-            'MessageBox.Show(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & ReportName)
-
-            rpt.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Substring(6) & "\" & ReportName)
-            
-            With crConnectionInfo
-                .ServerName = "RMG-PC\SQLEXPRESS"
-                .DatabaseName = "MusicSchool"
-                .UserID = "SA"
-                .Password = "rabih_123123"
+                .UserID = CnstrBuilder.UserID
+                .Password = CnstrBuilder.Password
+#End If
 
             End With
-#End If
 
             CrTables = rpt.Database.Tables
 
@@ -86,10 +63,6 @@ Public Class frmPrintTmp
                 crtableLogoninfo.ConnectionInfo = crConnectionInfo
                 CrTable.ApplyLogOnInfo(crtableLogoninfo)
             Next
-
-
-
-
 
 
             crParameterDiscreteValue.Value = strsql
@@ -133,6 +106,7 @@ Public Class frmPrintTmp
             Viewer.ShowCloseButton = False
             Viewer.ShowRefreshButton = False
         Catch ex As Exception
+            MsgBox(ex.Message)
             Throw ex
         End Try
     End Sub

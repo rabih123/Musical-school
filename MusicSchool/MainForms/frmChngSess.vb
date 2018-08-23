@@ -17,7 +17,7 @@ Public Class frmChngSess
 
     Private Sub frmChngSess_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuChgStdSess.Checked = False
+            frmload.MnuChgStdSess.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

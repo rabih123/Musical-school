@@ -17,7 +17,7 @@ Public Class frmPrintProf
 
     Private Sub frmPrintStd_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuProfRpt.Checked = False
+            frmload.MnuProfRpt.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

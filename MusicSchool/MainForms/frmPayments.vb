@@ -17,7 +17,7 @@ Public Class frmPayments
 
     Private Sub frmPayments_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuMonthPaym.Checked = False
+            frmload.MnuMonthPaym.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -388,6 +388,10 @@ Public Class frmPayments
                     End While
                 End If
                 If drsql.IsClosed = False Then drsql.Close()
+
+
+                tdbpay.UpdateData()
+                tdbpay.Splits(0).DisplayColumns("Pay_Amount").DataColumn.FooterText = dtPay.Compute("Sum(Pay_Amount)", "")
 
                 btnCopy.Enabled = False
                 btnCopy.Visible = False

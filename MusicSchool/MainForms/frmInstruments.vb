@@ -14,7 +14,7 @@ Public Class frmInstruments
     End Sub
     Private Sub frmInstruments_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuInst.Checked = False
+            frmload.MnuInst.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

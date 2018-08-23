@@ -20,7 +20,7 @@ Public Class frmUsrPriv
 
     Private Sub frmUsrPriv_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuPrivUser.Checked = False
+            frmload.MnuPrivUser.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

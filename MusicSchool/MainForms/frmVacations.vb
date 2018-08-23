@@ -71,7 +71,7 @@ Public Class frmVacations
     End Sub
     Private Sub frmVacations_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuHolidays.Checked = False
+            frmload.MnuHolidays.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

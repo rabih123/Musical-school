@@ -102,9 +102,9 @@ Public Class frmlogin
                     If txt2.Text = dr.Item("usr_pass") Then
                         usercode = dr.Item("usr_code").ToString.Trim
                         username = dr.Item("usr_name")
-                        Dim frm As frmMain
-                        frm = New frmMain
-                        frm.Show()
+
+                        frmload = New frmMain
+                        frmload.Show()
                         Me.DialogResult = Windows.Forms.DialogResult.OK
                         Me.Hide()
                     Else

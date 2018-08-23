@@ -16,7 +16,7 @@ Public Class frmProfPay
 
     Private Sub frmProfPay_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmMain.MnuProfPay.Checked = False
+            frmload.MnuProfPay.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.ToString, lctitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

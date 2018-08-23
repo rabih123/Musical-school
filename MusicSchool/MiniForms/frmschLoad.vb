@@ -15,7 +15,7 @@ Public Class frmschLoad
     End Function
 
     Private Sub frmschLoad_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmMain.MnuProfSched.Checked = False
+        frmload.MnuProfSched.Checked = False
     End Sub
 
 
